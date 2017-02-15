@@ -21,6 +21,10 @@ public class Phase1 {
                     Instruction step1 = new Instruction(9, 0, 0, mals.get(i).rs, mals.get(i).immediate, 0, 0, 0, 0); // lui step
                     Instruction step2 = new Instruction(10, 0, 1, 1, mals.get(i).immediate, 0, 0, 0, 0); // ori step, uses $at register
                     Instruction step3 = new Instruction(2, mals.get(i).rt, mals.get(i).rs, 1, 0, 0, 0, 0, 0); // addu step
+                    
+                    output.add(step1);
+                    output.add(step2);
+                    output.add(step3);
                 }
                 else{
                     output.add(mals.get(i)); // if immediate is small enough, just adds the instruction to output
@@ -31,6 +35,10 @@ public class Phase1 {
                     Instruction step1 = new Instruction(9, 0, 0, mals.get(i).rs, mals.get(i).immediate, 0, 0, 0, 0); // lui step
                     Instruction step2 = new Instruction(10, 0, 1, 1, mals.get(i).immediate, 0, 0, 0, 0); // ori step, uses $at register
                     Instruction step3 = new Instruction(2, mals.get(i).rt, mals.get(i).rs, 1, 0, 0, 0, 0, 0); // addu step
+                    
+                    output.add(step1);
+                    output.add(step2);
+                    output.add(step3);
                 }
                 else{
                     output.add(mals.get(i)); // if immediate is small enough, just adds the instruction to output
